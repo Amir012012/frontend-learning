@@ -7,16 +7,22 @@ const ProfileCard = () => {
     <div
       className=""
       style={{
-        backgroundColor: "lightgreen",
+        backgroundColor: "rgba(73, 219, 73, 0.82)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "space-between",
+
         width: "60%",
         height: "500px",
         margin: "90px auto",
+
         borderRadius: "10px",
-        border: "2px solid black",
+        border: "2px solid rgb(10, 120, 145)",
+
         fontSize: "25px",
       }}
     >
