@@ -14,7 +14,7 @@ const ProfileCard = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        justifyContent: "space-between",
+       
 
         width: "60%",
         height: "500px",
@@ -26,9 +26,26 @@ const ProfileCard = () => {
         fontSize: "25px",
       }}
     >
-      <h1>Name:{name}</h1>
-      <h2>Age:{age}</h2>
-      <h3>
+      <div
+        className=""
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <h1>Name:{name}</h1>
+        <h2>Age:{age}</h2>
+      </div>
+      <h3
+        className=""
+        style={{
+          borderRadius: "0px 50px 0px 80px ",
+          border: "2px dashed black",
+          padding: "50px",
+        }}
+      >
         Habbit:
         {habbit.map((item) => (
           <div>---------{item}---------</div>
