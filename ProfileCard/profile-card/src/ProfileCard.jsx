@@ -51,6 +51,22 @@ const ProfileCard = () => {
           <div>---------{item}---------</div>
         ))}
       </h3>
+      <button
+      className="databtn"
+      style={{
+        width:'100px',
+        height:'50px',
+        border:'1px solid black',
+        color:'balck',
+        fontSize:'14px',
+        fontWeight:'bold',
+        borderRadius:'10px',
+        boxShadow:"0 4px 14px rgba(0,0,0,0.9)",
+    
+      }}
+      >
+        income data
+      </button>
     </div>
   );
 };
