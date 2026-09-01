@@ -1,17 +1,23 @@
 import { useState } from "react";
+import ChildrenState from "./ChildrenState";
 
-function Greated() {
-  const [count, setCount] = useState(0);
-  const something = () => {
-    setCount(count + 1);
+function SetupAge() {
+  const [age, setAge] = useState(25);
+  const setUp = () => {
+    setAge(age + 1);
   };
-  return(
+  const [name,setName] = useState('Amir');
+  const setDown =()=>{
+    setName('FAEQ')
+  }
+  return (
     <>
-    <button onClick={something}>+</button>
-    <h1>{count}</h1>
-
+      <h1>Welcome to my website</h1>
+      <button onClick={setUp}>+</button>
+      <ChildrenState age = {age} name = {name} />
+      <button onClick={setDown}>set name</button>
     </>
-  )
+  );
 }
 
-export default Greated
+export default SetupAge;
