@@ -1,23 +1,62 @@
-import { useState } from "react";
 import ChildrenState from "./ChildrenState";
+import { useState } from "react";
 
-function SetupAge() {
+function Render() {
   const [age, setAge] = useState(25);
-  const setUp = () => {
+  const RenderAge = () => {
     setAge(age + 1);
   };
-  const [name,setName] = useState('Amir');
-  const setDown =()=>{
-    setName('FAEQ')
-  }
+  const [name, setName] = useState("UserName?");
+  const RenderName = () => {
+    setName("Amir");
+  };
+
   return (
     <>
-      <h1>Welcome to my website</h1>
-      <button onClick={setUp}>+</button>
-      <ChildrenState age = {age} name = {name} />
-      <button onClick={setDown}>set name</button>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "lightgreen",
+          height: "100vh",
+        }}
+      >
+        <div
+          className="box"
+          style={{
+            border: "1px solid black",
+            borderRadius: "10px",
+            width: "400px",
+            height: "500px",
+            background: "lightblue",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            flexDirection: "column",
+           
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              gap: "20px",
+              background:'khaki',
+              height:'100px',
+              width:'200px',
+              alignItems:'center',
+              justifyContent:'space-evenly',
+              borderRadius:'10px'
+            }}
+          >
+            <button onClick={RenderAge}>Set Age</button>
+            <button onClick={RenderName}>Set Name</button>
+          </div>
+          <ChildrenState name={name} age={age} />
+        </div>
+      </div>
     </>
   );
 }
 
-export default SetupAge;
+export default Render;

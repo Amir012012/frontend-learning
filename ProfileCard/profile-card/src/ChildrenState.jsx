@@ -1,10 +1,10 @@
-function ChildrenState({age,name}){
+function SetUpData({name,age}){
     return(
         <>
         <h1>Name:{name}</h1>
-        <p>Age:{age}</p>
+        <h2>Age:{age}</h2>
         </>
     )
 }
 
-export default ChildrenState;
+export default SetUpData;
